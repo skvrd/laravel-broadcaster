@@ -1,6 +1,6 @@
 <?php
 
-namespace Srvrd\LaravelBroadcaster;
+namespace Skvrd\LaravelBroadcaster;
 
 class Broadcaster
 {
