@@ -22,10 +22,11 @@ class Broadcaster
     public function broadcast($channel, $event, $data)
     {
         //We need to do some validation here by the end of the day
-        $client = new GuzzleHttp\Client();
+        $client = new \GuzzleHttp\Client();
         try {
             $res = $client->request('POST', $this->host."/api/events", [
                 'headers'        => ['Accept' => 'aplication/json'],
+                'debug'          => $this->debug,
                 'form_params' => [
                     'api_token'     => $this->api_token,
                     'channel'       => $channel,
@@ -33,7 +34,7 @@ class Broadcaster
                     'data'          => json_encode($data)
                 ]
             ]);
-            if ($debug) {
+            if ($this->debug) {
                 var_dump($res->getBody()->getContents());
             }
             return true;           
