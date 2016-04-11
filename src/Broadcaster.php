@@ -24,10 +24,10 @@ class Broadcaster
         //We need to do some validation here by the end of the day
         $client = new \GuzzleHttp\Client();
         try {
-            $res = $client->request('POST', $this->host."/api/events", [
+            $res = $client->post($this->host."/api/events", [
                 'headers'        => ['Accept' => 'aplication/json'],
                 'debug'          => $this->debug,
-                'form_params' => [
+                'body' => [
                     'api_token'     => $this->api_token,
                     'channel'       => $channel,
                     'event'         => $event,
