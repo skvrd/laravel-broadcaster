@@ -1,0 +1,13 @@
+{
+    "name": "as/laravel-broadcaster",
+    "authors": [
+        {
+            "name": "skvrd",
+            "email": "skvrd@example.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
