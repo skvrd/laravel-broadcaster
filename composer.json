@@ -9,8 +9,7 @@
     "autoload": {
         "psr-4": {
             "Skvrd\\LaravelBroadcaster\\": "src/"
-        },
-        "files": ["src/functions.php"]
+        }
     },
     "license": "MIT",
     "require": {
