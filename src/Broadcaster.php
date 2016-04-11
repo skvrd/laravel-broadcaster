@@ -1,5 +1,7 @@
 <?php
 
+namespace Srvrd\LaravelBroadcaster;
+
 class Broadcaster
 {
     private $api_token;
